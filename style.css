@@ -1,0 +1,277 @@
+:root {
+    --clr-primary-200: #1F2937;
+    --clr-primary-100: #3B82F6;
+
+    --clr-neutral-200: #E5E7EB;
+    --clr-neutral-100: #F9FAF8;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-regular: 300;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+
+    --fs-100: 18px;
+    --fs-200: 24px;
+    --fs-300: 36px;
+    --fs-400: 48px;
+
+    --fs-body: var(--fs-100);
+    --fs-primary-heading: var(--fs-400);
+    --fs-secondary-heading: var(--fs-300);
+    --fs-nav: var(--fs-100);
+    --fs-button: var(--fs-200);
+}
+
+.text-primary-200 {
+    color: var(--clr-primary-200)
+}
+
+.text-primary-100 {
+    color: var(--clr-primary-100)
+}
+
+.text-neutral-200 {
+    color: var(--clr-neutral-200)
+}
+
+.text-neutral-100 {
+    color: var(--clr-neutral-100)
+}
+
+.bg-primary-200 {
+    background-color: var(--clr-primary-200)
+}
+
+.bg-primary-100 {
+    background-color: var(--clr-primary-100)
+}
+
+.bg-neutral-200 {
+    background-color: var(--clr-neutral-200)
+}
+
+.bg-neutral-100 {
+    background-color: var(--clr-neutral-100)
+}
+
+.fw-extra-bold { font-weight: var(--fw-extra-bold) }
+.fw-bold { font-weight: var(--fw-bold) }
+.fw-regular { font-weight: var(--fw-regular) }
+
+.fs-primary-heading {
+    font-size: var(--fs-primary-heading);
+}
+
+.fs-secondary-heading {
+    font-size: var(--fs-secondary-heading);
+}
+
+.fs-nav {
+    font-size: var(--fs-nav);
+}
+
+.fs-button {
+    font-size: var(--fs-button);
+}
+
+.fs-100 { font-size: var(--fs-100) }
+.fs-200 {font-size: var(--fs-200) }
+.fs-300 {font-size: var(--fs-300) }
+.fs-300 {font-size: var(--fs-300) }
+
+
+
+/* Box sizing rules and remove default margins */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+/*Removes list styles on ul ol elemets */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Makes images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/*fancy code from kevin powell's tutorial container {
+    max-width: 1110px;
+    padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding))) * 2;
+    margin-inline: auto;   
+}
+*/
+
+.container {
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.section-one, .section-two {
+    padding: 60px 0;
+    align-items: center;
+}
+
+.section-three {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.section-four {
+    background-color: var(--clr-neutral-100);
+    padding: 100px 0;
+}
+
+.even-columns {
+    display: grid;
+    gap: 4rem;
+}
+.four-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .four-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* general styling */
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-primary);
+    color: var(--clr-neutral-100);
+}
+
+
+header {
+    background-color: var(--clr-primary-200);
+    text-align: center;
+    
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.primary-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+nav li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.landing-text button {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+    border: 3px solid var(--clr-primary-100);
+    border-radius: 10px;
+    padding: 4px 16px;
+}
+
+.landing-text h1, p{
+    margin-bottom: 24px;
+}
+
+.img-landing img {
+    margin: 0 auto;
+
+}
+
+.section-two h2 {
+    text-align: center;
+    margin-bottom: 24px; 
+}
+
+
+.wrapper-tile {
+    text-align: center;
+}
+
+.box {
+    margin: 0 auto;
+    border: 4px solid var(--clr-primary-100);
+    border-radius: 24px;
+    width: 200px;
+    height: 200px;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: var(--fw-regular);
+}
+
+
+.quote-author {
+    font-weight: var(--fw-bold);
+    float: right;
+}
+
+
+
+.cta {
+    background-color: var(--clr-primary-100);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 24px 40px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.cta-button button {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+    border: 3px solid var(--clr-neutral-100);
+    border-radius: 10px;
+    padding: 4px 16px;
+    
+}
